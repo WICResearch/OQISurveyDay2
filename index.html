@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>2026 WV WIC OQI Day 1 Evaluation</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+
+    <section id="introPage" class="intro-card">
+
+      <div class="logo-row">
+        <img
+          src="New Dept of Health Logo_horz_RGB.jpg"
+          class="logo"
+          alt="West Virginia Department of Health"
+        />
+
+        <img
+          src="WIC-Color.jpg"
+          class="logo"
+          alt="West Virginia WIC"
+        />
+      </div>
+
+      <div class="intro-banner">
+        <p class="survey-label">Office of Quality Improvement</p>
+
+        <h1>2026 WV WIC OQI Evaluation</h1>
+
+        <p class="survey-subtitle">Day 1 Participant Feedback</p>
+      </div>
+
+      <div class="intro-content">
+        <p class="intro-text">
+          Thank you for participating in the 2026 West Virginia WIC
+          Office of Quality Improvement meeting.
+        </p>
+
+        <p class="intro-text">
+          Your feedback is important and will be used to evaluate
+          today’s sessions, identify opportunities for improvement,
+          and guide future OQI initiatives.
+        </p>
+
+        <p class="intro-note">
+          Responses are anonymous and the evaluation should take
+          approximately 5 minutes to complete.
+        </p>
+      </div>
+
+      <button type="button" id="beginSurveyBtn">
+        Begin Evaluation
+      </button>
+
+    </section>
+
+    <form id="surveyForm" style="display: none;">
+
+      <div class="progress-area">
+        <div class="progress-text" id="progressText"></div>
+
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Survey progress"
+        >
+          <div id="progressFill"></div>
+        </div>
+      </div>
+
+      <section
+        id="questionCard"
+        class="question-card"
+      ></section>
+
+      <div class="button-row">
+        <button type="button" id="backBtn">
+          Back
+        </button>
+
+        <button type="button" id="nextBtn">
+          Next
+        </button>
+
+        <button type="submit" id="submitBtn">
+          Submit Evaluation
+        </button>
+      </div>
+
+      <p id="message" aria-live="polite"></p>
+
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

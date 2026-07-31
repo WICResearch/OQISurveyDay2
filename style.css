@@ -1,0 +1,462 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+
+    background:
+        linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.90)),
+        url("WIC_Embellishments_01.png");
+
+    background-repeat: repeat;
+    background-size: 650px;
+    background-attachment: fixed;
+}
+
+.container {
+max-width: 720px;
+margin: 30px auto;
+background: white;
+padding: 28px;
+border-radius: 16px;
+box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+}
+
+.survey-header {
+text-align: center;
+margin-bottom: 24px;
+}
+
+h1 {
+color: #4b2e83;
+margin-bottom: 10px;
+}
+
+h2 {
+color: #4b2e83;
+margin-top: 0;
+}
+
+p {
+line-height: 1.5;
+}
+
+.progress-text {
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.progress-bar {
+width: 100%;
+height: 10px;
+background: #e6e6ef;
+border-radius: 20px;
+margin-bottom: 24px;
+overflow: hidden;
+}
+
+#progressFill {
+height: 100%;
+width: 0%;
+background: #4b2e83;
+transition: width 0.3s ease;
+}
+
+.question-card {
+background: #ffffff;
+border: 1px solid #e4e4ec;
+border-radius: 14px;
+padding: 22px;
+min-height: 280px;
+}
+
+.field {
+margin-bottom: 22px;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+width: 100%;
+padding: 13px;
+border: 1px solid #bbb;
+border-radius: 9px;
+font-size: 1rem;
+box-sizing: border-box;
+}
+
+textarea {
+resize: vertical;
+}
+
+.checkbox-group {
+background: #f8f8fb;
+border-radius: 10px;
+padding: 14px;
+}
+
+.checkbox-group label {
+font-weight: normal;
+margin-bottom: 12px;
+}
+
+.checkbox-group input {
+margin-right: 8px;
+}
+
+.button-row {
+display: flex;
+justify-content: space-between;
+  align-items: center;
+margin-top: 24px;
+  gap: 20px; 
+}
+
+button {
+width: 170px;
+padding: 15px;
+background: #4b2e83;
+color: white;
+border: none;
+border-radius: 9px;
+font-size: 1.05rem;
+cursor: pointer;
+}
+
+button:hover {
+background: #351f63;
+}
+
+#backBtn {
+background: #6c757d;
+}
+
+#submitBtn {
+background: #2e7d32;
+}
+#submitBtn {
+  margin-left: auto;
+}
+.intro-card {
+text-align: center;
+padding: 24px 10px 10px;
+}
+
+.intro-banner {
+background: #4b2e83;
+color: white;
+padding: 24px 18px;
+border-radius: 14px;
+margin: 20px 0;
+}
+
+.intro-banner h1 {
+color: white;
+margin: 0 0 8px;
+}
+
+.intro-banner p {
+margin: 0;
+font-size: 1.1rem;
+}
+
+.intro-text {
+font-size: 1.1rem;
+max-width: 560px;
+margin: 20px auto;
+}
+
+.intro-note {
+background: #f0f7f1;
+border-left: 5px solid #2e7d32;
+padding: 14px;
+border-radius: 8px;
+font-weight: bold;
+}
+
+#beginSurveyBtn {
+background: #2e7d32;
+margin-top: 20px;
+width: 220px;
+}
+#message {
+margin-top: 18px;
+font-weight: bold;
+text-align: center;
+}
+.button-row {
+display: flex !important;
+flex-direction: row !important;
+justify-content: space-between !important;
+align-items: center !important;
+gap: 20px !important;
+}
+
+.button-row button {
+width: 160px !important;
+margin-top: 0 !important;
+}
+
+#backBtn {
+margin-right: auto !important;
+}
+
+#nextBtn,
+#submitBtn {
+margin-left: auto !important;
+}
+.logo-row {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 30px; 
+margin-bottom: 20px;
+}
+.logo {
+  max-height: 50px !important;
+  max-width: 220px !important;
+  width: auto !important; 
+  object-fit: contain;
+}
+/* =========================================
+   OQI Professional Evaluation Enhancements
+   ========================================= */
+
+.progress-area {
+  margin-bottom: 22px;
+}
+
+.progress-text {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4b2e83;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.section-number {
+  margin: 0 0 5px;
+  color: #6b6b6b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #4b2e83;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  margin: 8px 0 0;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.section-description {
+  margin: 22px 0 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.topics-box {
+  margin: 18px 0 24px;
+  padding: 18px 22px;
+  background: #f5f4f8;
+  border: 1px solid #ded9e8;
+  border-left: 5px solid #4b2e83;
+  border-radius: 8px;
+}
+
+.topics-box h3 {
+  margin: 0 0 10px;
+  color: #4b2e83;
+  font-size: 1.05rem;
+}
+
+.topics-box ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.topics-box li {
+  margin: 7px 0;
+  line-height: 1.45;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 9px;
+  color: #222;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.field-heading {
+  margin: 32px 0 15px;
+  padding-top: 20px;
+  color: #4b2e83;
+  font-size: 1.2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.required-mark {
+  color: #b42318;
+}
+
+.field input[type="text"],
+.field select,
+.field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 13px;
+  color: #222;
+  background: #fff;
+  border: 1px solid #b9b9b9;
+  border-radius: 7px;
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.field input[type="text"]:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #4b2e83;
+  box-shadow: 0 0 0 3px rgba(75, 46, 131, 0.14);
+}
+
+.survey-label {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.survey-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.intro-content {
+  margin: 26px auto;
+  max-width: 720px;
+}
+
+.intro-text {
+  line-height: 1.65;
+}
+
+.intro-note {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: #f5f4f8;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button-row button {
+  min-width: 120px;
+}
+
+#message {
+  min-height: 24px;
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.thank-you-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.thank-you-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  color: #fff;
+  background: #4b2e83;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.thank-you-card h1 {
+  margin-bottom: 18px;
+  color: #4b2e83;
+}
+
+.thank-you-card p {
+  max-width: 620px;
+  margin: 12px auto;
+  line-height: 1.65;
+}
+
+.thank-you-lead {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.thank-you-card button {
+  margin-top: 24px;
+}
+
+@media (max-width: 650px) {
+  .section-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .topics-box {
+    padding: 16px 18px;
+  }
+
+  .button-row {
+    flex-direction: column-reverse;
+  }
+
+  .button-row button {
+    width: 100%;
+  }
+}
