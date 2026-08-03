@@ -1,6 +1,5 @@
 const scriptURL =
-  "const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxQPUdevMoK0zIDym_M3rpiGCMZpH1lWLZHDg0Ykuk89tu4sEP2gSaBai3tPTnJ1V2A/exec";";
+  "https://script.google.com/macros/s/AKfycbxQPUdevMoK0zIDym_M3rpiGCMZpH1lWLZHDg0Ykuk89tu4sEP2gSaBai3tPTnJ1V2A/exec";
 
 const scaleOptions = [
   "Strongly Disagree",
@@ -93,7 +92,6 @@ const pages = [
     ]
   },
 
-  {
    {
   title: "Crossroads Data Entry",
   topics: [
@@ -130,7 +128,6 @@ const pages = [
     }
   ]
 },
-  {
    {
   title: "Hospital Liaison Round Robin",
   description: "Please rate the following statements about this session.",
