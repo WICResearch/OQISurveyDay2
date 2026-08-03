@@ -198,7 +198,38 @@ const pages = [
     }
   ]
 },
-
+{
+  title: "Hospital Data Tracking Spreadsheets Workshop",
+  description: "Please rate the following statements about this session.",
+  fields: [
+    {
+      type: "scale",
+      name: "hospitalDataPresenterClear",
+      label: "Presenter communicated clearly."
+    },
+    {
+      type: "scale",
+      name: "hospitalDataOrganized",
+      label: "Session was well organized."
+    },
+    {
+      type: "scale",
+      name: "hospitalDataGoodUseOfTime",
+      label: "Session was a good use of my time."
+    },
+    {
+      type: "scale",
+      name: "hospitalDataEasyToFollow",
+      label: "Session was easy to follow."
+    },
+    {
+      type: "textarea",
+      name: "hospitalDataSuggestions",
+      heading: "Suggestions",
+      label: "What suggestions do you have for improving this session?"
+    }
+  ]
+},
   {
     title: "Overall Reflection",
     description:
