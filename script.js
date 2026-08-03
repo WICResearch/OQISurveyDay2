@@ -163,42 +163,41 @@ const pages = [
   ]
 },
 
-  {
-    title: "Local Operations",
-    topics: [
-      "Lead Testing Expansion",
-      "Mental Health Certification Expansion"
-    ],
-    description: "Please rate the following statements about this session.",
-    fields: [
-      {
-        type: "scale",
-        name: "localOperationsPresenterClear",
-        label: "Presenter communicated clearly."
-      },
-      {
-        type: "scale",
-        name: "localOperationsOrganized",
-        label: "Session was well organized."
-      },
-      {
-        type: "scale",
-        name: "localOperationsGoodUseOfTime",
-        label: "Session was a good use of my time."
-      },
-      {
-        type: "scale",
-        name: "localOperationsEasyToFollow",
-        label: "Session was easy to follow."
-      },
-      {
-        type: "textarea",
-        name: "localOperationsSuggestions",
-        heading: "Suggestions",
-        label: "What suggestions do you have for improving this session?"
-      }
-    ]
-  },
+{
+  title: "National Breastfeeding Awareness Month",
+  topics: [
+    "Breastfeeding Data"
+  ],
+  description: "Please rate the following statements about this session.",
+  fields: [
+    {
+      type: "scale",
+      name: "breastfeedingPresenterClear",
+      label: "Presenter communicated clearly."
+    },
+    {
+      type: "scale",
+      name: "breastfeedingOrganized",
+      label: "Session was well organized."
+    },
+    {
+      type: "scale",
+      name: "breastfeedingGoodUseOfTime",
+      label: "Session was a good use of my time."
+    },
+    {
+      type: "scale",
+      name: "breastfeedingEasyToFollow",
+      label: "Session was easy to follow."
+    },
+    {
+      type: "textarea",
+      name: "breastfeedingSuggestions",
+      heading: "Suggestions",
+      label: "What suggestions do you have for improving this session?"
+    }
+  ]
+},
 
   {
     title: "Overall Reflection",
