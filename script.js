@@ -130,45 +130,38 @@ const pages = [
   ]
 },
   {
-    title: "Funding Discussion",
-    topics: [
-      "Spend-Down Options",
-      "WIC Tents and WICI Funding",
-      "WICI 2026 Masimo Pilot",
-      "FY2027 Funding",
-      "Overview of Projections",
-      "Operations Grants Administration"
-    ],
-    description: "Please rate the following statements about this session.",
-    fields: [
-      {
-        type: "scale",
-        name: "fundingPresenterClear",
-        label: "Presenter communicated clearly."
-      },
-      {
-        type: "scale",
-        name: "fundingOrganized",
-        label: "Session was well organized."
-      },
-      {
-        type: "scale",
-        name: "fundingGoodUseOfTime",
-        label: "Session was a good use of my time."
-      },
-      {
-        type: "scale",
-        name: "fundingEasyToFollow",
-        label: "Session was easy to follow."
-      },
-      {
-        type: "textarea",
-        name: "fundingSuggestions",
-        heading: "Suggestions",
-        label: "What suggestions do you have for improving this session?"
-      }
-    ]
-  },
+   {
+  title: "Hospital Liaison Round Robin",
+  description: "Please rate the following statements about this session.",
+  fields: [
+    {
+      type: "scale",
+      name: "hospitalLiaisonPresenterClear",
+      label: "Presenter communicated clearly."
+    },
+    {
+      type: "scale",
+      name: "hospitalLiaisonOrganized",
+      label: "Session was well organized."
+    },
+    {
+      type: "scale",
+      name: "hospitalLiaisonGoodUseOfTime",
+      label: "Session was a good use of my time."
+    },
+    {
+      type: "scale",
+      name: "hospitalLiaisonEasyToFollow",
+      label: "Session was easy to follow."
+    },
+    {
+      type: "textarea",
+      name: "hospitalLiaisonSuggestions",
+      heading: "Suggestions",
+      label: "What suggestions do you have for improving this session?"
+    }
+  ]
+},
 
   {
     title: "Local Operations",
