@@ -12,6 +12,37 @@ const scaleOptions = [
 let currentPage = 0;
 const answers = {};
 
+function sessionFields(prefix) {
+  return [
+    {
+      type: "scale",
+      name: `${prefix}PresenterClear`,
+      label: "Presenter communicated clearly."
+    },
+    {
+      type: "scale",
+      name: `${prefix}Organized`,
+      label: "Session was well organized."
+    },
+    {
+      type: "scale",
+      name: `${prefix}GoodUseOfTime`,
+      label: "Session was a good use of my time."
+    },
+    {
+      type: "scale",
+      name: `${prefix}EasyToFollow`,
+      label: "Session was easy to follow."
+    },
+    {
+      type: "textarea",
+      name: `${prefix}Suggestions`,
+      heading: "Suggestions",
+      label: "What suggestions do you have for improving this session?"
+    }
+  ];
+}
+
 const pages = [
   {
     title: "Participant Information",
@@ -56,178 +87,25 @@ const pages = [
       }
     ]
   },
-
   {
-    title: "Welcome and OQI Overview",
-    subtitle:
-      "OQI Purpose, Mission, Values, Agenda, and Consensus Decision-Making",
+    title: "Crossroads Data Entry",
+    topics: [
+      "Hemoglobin Discussion",
+      "Masimo"
+    ],
     description: "Please rate the following statements about this session.",
-    fields: [
-      {
-        type: "scale",
-        name: "welcomePresenterClear",
-        label: "Presenter communicated clearly."
-      },
-      {
-        type: "scale",
-        name: "welcomeOrganized",
-        label: "Session was well organized."
-      },
-      {
-        type: "scale",
-        name: "welcomeGoodUseOfTime",
-        label: "Session was a good use of my time."
-      },
-      {
-        type: "scale",
-        name: "welcomeEasyToFollow",
-        label: "Session was easy to follow."
-      },
-      {
-        type: "textarea",
-        name: "welcomeSuggestions",
-        heading: "Suggestions",
-        label: "What suggestions do you have for improving this session?"
-      }
-    ]
+    fields: sessionFields("crossroads")
   },
-
-   {
-  title: "Crossroads Data Entry",
-  topics: [
-    "Hemoglobin Discussion",
-    "Masimo"
-  ],
-  description: "Please rate the following statements about this session.",
-  fields: [
-    {
-      type: "scale",
-      name: "crossroadsPresenterClear",
-      label: "Presenter communicated clearly."
-    },
-    {
-      type: "scale",
-      name: "crossroadsOrganized",
-      label: "Session was well organized."
-    },
-    {
-      type: "scale",
-      name: "crossroadsGoodUseOfTime",
-      label: "Session was a good use of my time."
-    },
-    {
-      type: "scale",
-      name: "crossroadsEasyToFollow",
-      label: "Session was easy to follow."
-    },
-    {
-      type: "textarea",
-      name: "crossroadsSuggestions",
-      heading: "Suggestions",
-      label: "What suggestions do you have for improving this session?"
-    }
-  ]
-},
-   {
-  title: "Hospital Liaison Round Robin",
-  description: "Please rate the following statements about this session.",
-  fields: [
-    {
-      type: "scale",
-      name: "hospitalLiaisonPresenterClear",
-      label: "Presenter communicated clearly."
-    },
-    {
-      type: "scale",
-      name: "hospitalLiaisonOrganized",
-      label: "Session was well organized."
-    },
-    {
-      type: "scale",
-      name: "hospitalLiaisonGoodUseOfTime",
-      label: "Session was a good use of my time."
-    },
-    {
-      type: "scale",
-      name: "hospitalLiaisonEasyToFollow",
-      label: "Session was easy to follow."
-    },
-    {
-      type: "textarea",
-      name: "hospitalLiaisonSuggestions",
-      heading: "Suggestions",
-      label: "What suggestions do you have for improving this session?"
-    }
-  ]
-},
-
-{
-  title: "National Breastfeeding Awareness Month",
-  topics: [
-    "Breastfeeding Data"
-  ],
-  description: "Please rate the following statements about this session.",
-  fields: [
-    {
-      type: "scale",
-      name: "breastfeedingPresenterClear",
-      label: "Presenter communicated clearly."
-    },
-    {
-      type: "scale",
-      name: "breastfeedingOrganized",
-      label: "Session was well organized."
-    },
-    {
-      type: "scale",
-      name: "breastfeedingGoodUseOfTime",
-      label: "Session was a good use of my time."
-    },
-    {
-      type: "scale",
-      name: "breastfeedingEasyToFollow",
-      label: "Session was easy to follow."
-    },
-    {
-      type: "textarea",
-      name: "breastfeedingSuggestions",
-      heading: "Suggestions",
-      label: "What suggestions do you have for improving this session?"
-    }
-  ]
-},
-{
-  title: "Hospital Data Tracking Spreadsheets Workshop",
-  description: "Please rate the following statements about this session.",
-  fields: [
-    {
-      type: "scale",
-      name: "hospitalDataPresenterClear",
-      label: "Presenter communicated clearly."
-    },
-    {
-      type: "scale",
-      name: "hospitalDataOrganized",
-      label: "Session was well organized."
-    },
-    {
-      type: "scale",
-      name: "hospitalDataGoodUseOfTime",
-      label: "Session was a good use of my time."
-    },
-    {
-      type: "scale",
-      name: "hospitalDataEasyToFollow",
-      label: "Session was easy to follow."
-    },
-    {
-      type: "textarea",
-      name: "hospitalDataSuggestions",
-      heading: "Suggestions",
-      label: "What suggestions do you have for improving this session?"
-    }
-  ]
-},
+  {
+    title: "Hospital Liaison Round Robin",
+    description: "Please rate the following statements about this session.",
+    fields: sessionFields("hospitalLiaison")
+  },
+  {
+    title: "Hospital Data Tracking Spreadsheets Workshop",
+    description: "Please rate the following statements about this session.",
+    fields: sessionFields("hospitalData")
+  },
   {
     title: "Overall Reflection",
     description:
@@ -297,7 +175,8 @@ function renderPage() {
   progressFill.style.width =
     `${((currentPage + 1) / pages.length) * 100}%`;
 
-  backBtn.style.display = currentPage === 0 ? "none" : "inline-block";
+  backBtn.style.display =
+    currentPage === 0 ? "none" : "inline-block";
 
   nextBtn.style.display =
     currentPage === pages.length - 1 ? "none" : "inline-block";
@@ -344,7 +223,6 @@ function createField(field) {
     defaultOption.textContent = "Select one";
     defaultOption.disabled = true;
     defaultOption.selected = true;
-
     select.appendChild(defaultOption);
 
     const options =
@@ -393,13 +271,11 @@ function createField(field) {
 }
 
 function saveCurrentPage() {
-  const fields = questionCard.querySelectorAll(
-    "input, select, textarea"
-  );
-
-  fields.forEach((field) => {
-    answers[field.name] = field.value.trim();
-  });
+  questionCard
+    .querySelectorAll("input, select, textarea")
+    .forEach((field) => {
+      answers[field.name] = field.value.trim();
+    });
 }
 
 function validateCurrentPage() {
@@ -426,10 +302,7 @@ nextBtn.addEventListener("click", () => {
   currentPage++;
   renderPage();
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 backBtn.addEventListener("click", () => {
@@ -437,10 +310,7 @@ backBtn.addEventListener("click", () => {
   currentPage--;
   renderPage();
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 document
@@ -453,7 +323,6 @@ document
     }
 
     saveCurrentPage();
-
     message.textContent = "Submitting your response...";
     submitBtn.disabled = true;
 
@@ -470,7 +339,8 @@ document
             <h1>Thank You!</h1>
 
             <p class="thank-you-lead">
-              Thank you for completing the October 21, 2026 WV WIC OQI Day 2 Evaluation.
+              Thank you for completing the October 21, 2026
+              WV WIC OQI Day 2 Evaluation.
             </p>
 
             <p>
@@ -490,17 +360,13 @@ document
           </div>
         `;
 
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       })
       .catch((error) => {
         message.textContent =
           "There was an error submitting the survey. Please try again.";
 
         submitBtn.disabled = false;
-
         console.error("Submission error:", error);
       });
   });
@@ -514,8 +380,5 @@ document
     currentPage = 0;
     renderPage();
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
