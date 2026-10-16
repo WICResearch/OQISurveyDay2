@@ -88,23 +88,24 @@ const pages = [
     ]
   },
   {
-    title: "Crossroads Data Entry",
-    topics: [
-      "Hemoglobin Discussion",
-      "Masimo"
-    ],
+    title: "Hospital Data Tracking Spreadsheets",
     description: "Please rate the following statements about this session.",
-    fields: sessionFields("crossroads")
+    fields: sessionFields("hospitalData")
   },
   {
-    title: "Hospital Liaison Round Robin",
+    title: "Hospital Liaison Round Robin & Small Wins",
     description: "Please rate the following statements about this session.",
     fields: sessionFields("hospitalLiaison")
   },
   {
-    title: "Hospital Data Tracking Spreadsheets Workshop",
+    title: "Crossroads Hospital Certification Appointment Types",
     description: "Please rate the following statements about this session.",
-    fields: sessionFields("hospitalData")
+    fields: sessionFields("crossroads")
+  },
+  {
+    title: "Hospital Liaison Patient Survey",
+    description: "Please rate the following statements about this session.",
+    fields: sessionFields("patientSurvey")
   },
   {
     title: "Overall Reflection",
